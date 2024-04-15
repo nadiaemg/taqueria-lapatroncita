@@ -1,0 +1,162 @@
+@import "/css/variables.css";
+
+html{
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Header*/
+header{
+    height: 100vh;
+}
+
+.hero-title{
+    padding: 20rem 7% 0 7%;
+}
+
+/*Barra de navegación*/
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4.8rem 7%;
+    background-color: transparent;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.logo {
+    width: 35rem;
+}
+
+.nav-lista {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 0;
+}
+
+.nav-lista li {
+    position: relative;
+}
+
+.nav-lista li a {
+    text-decoration: none;
+    font-size: var(--h6-size);
+    color: var(--saffron);
+    font-family: var(--rufina);
+    font-weight: 700;
+    font-style: normal;
+    line-height: 4.8rem;
+    position: relative;
+}
+
+.nav-lista li a:hover {
+    color: var(--dutch-white);
+}
+
+.nav-lista li:last-child {
+    padding: 0.5rem;
+    border: solid 1px var(--saffron);
+    text-align: center;
+}
+
+.nav-lista li:last-child:hover, 
+.nav-lista li:last-child:hover a {
+    background-color: var(--saffron);
+    color: var(--bistre);
+    transition: 0.3s ease-in;
+}
+
+/*Línea bajo elementos del menu*/
+.nav-lista li a::after {
+    content: '';
+    position: absolute; 
+    bottom: -5px;
+    left: 0;
+    width: 0%; 
+    height: 2px; 
+    background-color: var(--saffron); 
+    transition: width 0.3s ease; 
+}
+
+.nav-lista li:last-child a::after {
+    display: none;
+}
+
+.nav-lista li a[aria-current="page"]::after {
+    width: 100%; 
+}
+
+/*Botones menu hamburguesa*/
+.abrir-menu, .cerrar-menu {
+    display: none;
+    border: 0;
+    font-size: var(--h6-size);
+    line-height: 4.8rem;
+    color: #F2BE13;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+    .logo {
+        width: 24rem;
+    }
+    .nav-lista{
+        gap: 2rem;
+    }
+    .nav-lista li a {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .abrir-menu, .cerrar-menu {
+        display: block;
+    }
+
+    nav{
+        padding-top: 2.5rem;
+    }
+
+    .nav-lista{
+        opacity: 0;
+        visibility: hidden;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        align-items: end;
+        background-color: #381A05;
+        padding: 2.5rem 7%;
+        box-shadow: 0 0 0 100vmax #381a0580;
+        height: 100vh;
+        width: 30vh;
+    }
+
+    .nav-visible{
+        opacity: 1;
+        visibility: visible;
+        animation: fadeIn 0.2s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+}

@@ -1,0 +1,5 @@
+@import "/css/variables.css";
+
+header{
+    background-color: var(--bistre);
+}
