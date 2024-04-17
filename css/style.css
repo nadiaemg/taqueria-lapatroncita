@@ -1,6 +1,7 @@
 @import "/css/variables.css";
 
-html{
+/*Estilos generales*/
+html {
     font-size: 10px;
 }
 
@@ -9,12 +10,77 @@ html{
     padding: 0;
 }
 
+h1 {
+    font-size: var(--h1-size);
+    font-family: var(--rufina);
+    line-height: 12rem;
+    font-weight: 700;
+    color: var(--dutch-white);
+}
+
+h2 {
+    font-size: var(--h2-size);
+    font-family: var(--rufina);
+    line-height: 10.5rem;
+    font-weight: 700;
+    color: var(--bistre);
+}
+
+h3 {
+    font-size: var(--h3-size);
+    font-family: var(--rufina);
+    line-height: 8.4rem;
+    font-weight: 700;
+    color: var(--primary-text);
+}
+
+h4 {
+    font-size: var(--h4-size);
+    font-family: var(--rufina);
+    line-height: 6.4rem;
+    font-weight: 700;
+    color: var(--primary-text);
+}
+
+h5 {
+    font-size: var(--h5-size);
+    font-family: var(--rufina);
+    line-height: 4.8rem;
+    font-weight: 700;
+    color: var(--primary-text);
+}
+
+h6 {
+    font-size: var(--h6-size);
+    font-family: var(--rufina);
+    line-height: 4.8rem;
+    font-weight: 700;
+    color: var(--primary-text);
+}
+
+p {
+    font-size: var(--body);
+    font-family: var(--lato);
+    line-height: 3.3rem;
+    font-weight: 400;
+    color: var(--primary-text);
+}
+
+.widgets {
+    font-size: var(--widget);
+    font-family: var(--lato);
+    line-height: 2.5rem;
+    font-weight: 400;
+    color: var(--dutch-white);
+    margin: 0;
+}
+
 /*Header*/
-header{
+header {
     height: 100vh;
 }
 
-.hero-title{
+.hero-title {
     padding: 20rem 7% 0 7%;
 }
 
@@ -23,12 +89,14 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 4.8rem 7%;
+    padding: 3.5rem 7%;
     background-color: transparent;
     position: fixed;
+    top: 0;
     left: 0;
     right: 0;
     z-index: 100;
+    transition: background-color 0.4s ease-in-out;
 }
 
 .logo {
@@ -56,6 +124,7 @@ nav {
     font-style: normal;
     line-height: 4.8rem;
     position: relative;
+    transition: color 0.4s ease-in-out;
 }
 
 .nav-lista li a:hover {
@@ -68,7 +137,7 @@ nav {
     text-align: center;
 }
 
-.nav-lista li:last-child:hover, 
+.nav-lista li:last-child:hover,
 .nav-lista li:last-child:hover a {
     background-color: var(--saffron);
     color: var(--bistre);
@@ -77,14 +146,14 @@ nav {
 
 /*Línea bajo elementos del menu*/
 .nav-lista li a::after {
-    content: '';
-    position: absolute; 
+    content: "";
+    position: absolute;
     bottom: -5px;
     left: 0;
-    width: 0%; 
-    height: 2px; 
-    background-color: var(--saffron); 
-    transition: width 0.3s ease; 
+    width: 0%;
+    height: 2px;
+    background-color: var(--saffron);
+    transition: width 0.3s ease;
 }
 
 .nav-lista li:last-child a::after {
@@ -92,43 +161,276 @@ nav {
 }
 
 .nav-lista li a[aria-current="page"]::after {
-    width: 100%; 
+    width: 100%;
 }
 
 /*Botones menu hamburguesa*/
-.abrir-menu, .cerrar-menu {
+.abrir-menu,
+.cerrar-menu {
     display: none;
     border: 0;
     font-size: var(--h6-size);
     line-height: 4.8rem;
-    color: #F2BE13;
+    color: #f2be13;
     background-color: transparent;
     cursor: pointer;
 }
 
+.scrolled {
+    background-color: var(--white);
+    opacity: 0.98;
+}
+
+.scrolled li a {
+    color: var(--bistre);
+}
+
+.scrolled li a:hover {
+    color: var(--saffron);
+}
+
+/*Footer*/
+footer {
+    background-color: var(--bistre);
+}
+
+footer a {
+    color: var(--saffron);
+}
+
+footer h6 {
+    color: var(--saffron);
+    font-weight: 400;
+}
+
+footer hr {
+    border: dashed 2px var(--saffron);
+    font-size: 5px;
+    color: var(--dutch-white);
+}
+
+.logo-footer{
+    display: flex;
+    align-self: center;
+}
+
+.footer-contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 3.5rem 7%;
+}
+
+.redes-contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.5rem 7%;
+}
+
+.redes-contenedor p {
+    color: var(--saffron);
+}
+
+.email-contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+
+.email-contenedor input {
+    width: 65%;
+    height: 5rem;
+    background-color: var(--bistre);
+    border-radius: 0%;
+    border: solid 2px var(--saffron);
+    color: var(--dutch-white);
+    font-size: var(--widget);
+    font-family: var(--lato);
+    line-height: 3.3rem;
+    font-weight: 400;
+    padding-left: 1.6rem;
+}
+
+.email-contenedor input:focus {
+    background-color: var(--dutch-white);
+    border: solid 2px var(--saffron);
+    color: var(--bistre);
+    box-shadow: 0 0 5px var(--payne-gray);
+}
+
+.email-contenedor input::placeholder {
+    font-size: var(--widget);
+    font-family: var(--lato);
+    color: var(--saffron);
+}
+
+.checkbox-politicas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.checkbox-politicas input[type="checkbox"] {
+    background-color: var(--bistre);
+    border: solid 2px var(--saffron);
+    border-radius: 0%;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    margin-right: 5px;
+}
+
+.checkbox-politicas input[type="checkbox"]::after {
+    content: "\F272";
+    font-family: bootstrap-icons;
+    font-weight: 900;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+    color: var(--saffron);
+    background-color: var(--bistre);
+    border: solid 2px var(--saffron);
+    display: none;
+}
+
+/*.checkbox-politicas input[type="checkbox"]:hover{
+        background-color: var(--dutch-white);
+    }*/
+
+.checkbox-politicas input[type="checkbox"]:focus {
+    box-shadow: 0 0 5px var(--payne-gray);
+}
+
+.checkbox-politicas input[type="checkbox"]:checked::after {
+    display: block;
+}
+
+.redes-sociales {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 0;
+}
+
+.redes-sociales li a {
+    text-decoration: none;
+    font-size: var(--h6-size);
+}
+
+/*Botones*/
+.boton-amarillo {
+    width: 16rem;
+    height: 5rem;
+    border: solid 2px var(--saffron);
+    border-radius: 0%;
+    background-color: var(--saffron);
+    color: var(--bistre);
+    font-size: var(--body);
+    font-family: var(--rufina);
+}
+
+/*MediaQueries*/
 @media (max-width: 1400px) {
+
+    /*Estilos generales*/
+    h6 {
+        font-size: var(--h6-size-sm);
+    }
+
+    h5 {
+        font-size: var(--h5-size-sm);
+    }
+
+    h4 {
+        font-size: var(--h4-size-sm);
+    }
+
+    h3 {
+        font-size: var(--h3-size-sm);
+    }
+
+    h2 {
+        font-size: var(--h2-size-sm);
+    }
+
+    h1 {
+        font-size: var(--h1-size-sm);
+    }
+
+    p {
+        font-size: var(-body-sm);
+    }
+
+    .widgets {
+        font-size: var(--widget-sm);
+    }
+
+    /*Barra de navegación*/
+    nav {
+        padding: 2.5rem 7%;
+    }
+
     .logo {
         width: 24rem;
     }
-    .nav-lista{
+
+    .nav-lista {
         gap: 2rem;
     }
+
     .nav-lista li a {
-        font-size: 2rem;
+        font-size: var(--h6-size-sm);
         line-height: 2.5rem;
+    }
+
+    /*Footer*/
+    .email-contenedor input {
+        font-size: var(--widget-sm);
+    }
+
+    .email-contenedor input::placeholder {
+        font-size: var(--widget-sm);
+    }
+
+    .redes-sociales li a {
+        font-size: var(--h6-size-sm);
+    }
+
+    .contacto-contenedor {
+        padding-right: 0;
+    }
+
+    .boton-amarillo {
+        font-size: var(--body-sm);
+        font-weight: 700;
     }
 }
 
 @media (max-width: 992px) {
-    .abrir-menu, .cerrar-menu {
+
+    /*Barra de navegación*/
+    .abrir-menu,
+    .cerrar-menu {
         display: block;
     }
 
-    nav{
-        padding-top: 2.5rem;
+    .scrolled li a {
+        color: var(--saffron);
     }
 
-    .nav-lista{
+    .scrolled li a:hover {
+        color: var(--dutch-white);
+    }
+
+    .nav-lista {
         opacity: 0;
         visibility: hidden;
         flex-direction: column;
@@ -137,14 +439,14 @@ nav {
         right: 0;
         bottom: 0;
         align-items: end;
-        background-color: #381A05;
+        background-color: #381a05;
         padding: 2.5rem 7%;
         box-shadow: 0 0 0 100vmax #381a0580;
         height: 100vh;
         width: 30vh;
     }
 
-    .nav-visible{
+    .nav-visible {
         opacity: 1;
         visibility: visible;
         animation: fadeIn 0.2s ease-in-out forwards;
@@ -154,9 +456,27 @@ nav {
         from {
             opacity: 0;
         }
+
         to {
             opacity: 1;
         }
     }
 
+    /*Footer*/
+    .footer-contenedor {
+        flex-direction: column;
+    }
+
+    .contacto-contenedor {
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+    .suscripcion-contenedor {
+        width: 100%;
+    }
+
+    .boton-amarillo {
+        width: 12rem;
+    }
 }

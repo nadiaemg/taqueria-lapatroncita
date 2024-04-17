@@ -10,13 +10,22 @@
     --white: #ffffff;
 
     --body: 2.4rem;
-    --widget: 1.8rem;
+    --widget: 1.6rem;
     --h6-size: 2.6rem;
     --h5-size: 3.2rem;
     --h4-size: 4.8rem;
     --h3-size: 6.8rem;
     --h2-size: 8.8rem;
-    --h1-size: 108rem;
+    --h1-size: 10.8rem;
+
+    --body-sm: 1.8rem;
+    --widget-sm: 1.45rem;
+    --h6-size-sm: 2rem;
+    --h5-size-sm: 2.6rem;
+    --h4-size-sm: 4.2rem;
+    --h3-size-sm: 6.2rem;
+    --h2-size-sm: 8.2rem;
+    --h1-size-sm: 10.2rem;
 
     --rufina: "Rufina", serif;
     --lato: "Lato", sans-serif;
