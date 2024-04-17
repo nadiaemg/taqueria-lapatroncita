@@ -75,15 +75,6 @@ p {
     margin: 0;
 }
 
-/*Header*/
-header {
-    height: 100vh;
-}
-
-.hero-title {
-    padding: 20rem 7% 0 7%;
-}
-
 /*Barra de navegación*/
 nav {
     display: flex;

@@ -1,0 +1,29 @@
+@import "/css/variables.css";
+
+header{
+    height: 100vh;
+    background-image: url(/src/img/nosotros.jpg);
+    background-color: #00000070;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header h5 {
+    color: var(--dutch-white);
+}
+
+.encabezado{
+    height: 100%;
+    padding-left: 7%;
+    padding-right: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.deslizar{
+    transform: rotate(90deg);
+    align-self: flex-start;
+}
