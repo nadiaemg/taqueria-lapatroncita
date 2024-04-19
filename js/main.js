@@ -121,7 +121,7 @@ function addFooter() {
 
 window.addEventListener("load", function (event) {
     event.preventDefault;
-    window.scrollTo(0,0);
+    //window.scrollTo(0,0);
     addNavbar();
     addFooter();
 });
