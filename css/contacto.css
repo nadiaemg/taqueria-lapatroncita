@@ -28,3 +28,124 @@ header h5 {
     transform: rotate(90deg);
     align-self: flex-start;
 }
+
+.formulario-contenedor{
+    background-color: var(--dutch-white);
+    padding: 19.5rem 7% 7% 3.5rem;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.formulario-contenedor form label{
+    font-size: var(--body-sm);
+}
+.boton-contacto{
+    display: flex;
+    justify-content: center;
+}
+
+.formulario-contenedor input{
+    height: 5rem;
+    background-color: var(--dutch-white);
+    border-radius: 0%;
+    border: solid 1px var(--bistre);
+    color: var(--bistre);
+    font-size: var(--widget);
+    font-family: var(--lato);
+    line-height: 3.3rem;
+    font-weight: 400;
+    padding-left: 1.6rem;
+}
+
+.formulario-contenedor textarea{
+    max-height: 20rem;
+    background-color: var(--dutch-white);
+    border-radius: 0%;
+    border: solid 1px var(--bistre);
+    color: var(--bistre);
+    font-size: var(--widget);
+    font-family: var(--lato);
+    line-height: 3.3rem;
+    font-weight: 400;
+    padding-left: 1.6rem;
+    margin-bottom: 3rem;
+}
+
+.formulario-contenedor input:focus,
+.formulario-contenedor textarea:focus {
+    background-color: var(--white);
+    border: solid 1px var(--spanish-orange);
+    color: var(--bistre);
+    box-shadow: 0 0 5px var(--spanish-orange);
+}
+
+.formulario-contenedor input::placeholder,
+.formulario-contenedor textarea::placeholder {
+    font-size: var(--widget);
+    font-family: var(--lato);
+    color: var(--secondary-text);
+}
+
+.formulario-contenedor input:focus::placeholder,
+.formulario-contenedor textarea:focus::placeholder {
+    color: var(--spanish-orange);
+}
+
+.formulario-contenedor input:-webkit-autofill,
+.formulario-contenedor input:-webkit-autofill:hover {
+  -webkit-text-fill-color: var(--bistre);
+  -webkit-box-shadow: 0 0 0px 1000px var(--dutch-white) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.formulario-contenedor input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--bistre);
+    -webkit-box-shadow: 0 0 0px 1000px var(--white) inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  .contacto-politicas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contacto-politicas input[type="checkbox"] {
+    background-color: var(--dutch-white);
+    border: solid 1px var(--bistre);
+    border-radius: 0%;
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    margin: 0 0.5rem 0 0;
+    padding: 0;
+}
+
+.contacto-politicas input[type="checkbox"]::after {
+    content: "\F272";
+    font-family: bootstrap-icons;
+    font-weight: 900;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    color: var(--bistre);
+    background-color: var(--dutch-white);
+    display: none;
+}
+
+/*.contacto-politicas input[type="contacto"]:hover{
+        background-color: var(--dutch-white);
+    }*/
+
+.contacto-politicas input[type="checkbox"]:focus {
+    box-shadow: 0 0 5px var(--spanish-orange);
+    background-color: var(--white);
+    border: solid 1px var(--spanish-orange);
+}
+
+.contacto-politicas input[type="checkbox"]:checked::after {
+    display: block;
+}

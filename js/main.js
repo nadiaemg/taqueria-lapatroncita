@@ -135,24 +135,24 @@ function addFooter() {
     const checkboxPoliticas = document.getElementById("checkboxPoliticas");
     const form = document.forms['submit-to-google-sheet'];
 
-    inputCorreo.addEventListener("change", function(){
-        alertaCorreo.innerText= "";
+    inputCorreo.addEventListener("change", function () {
+        alertaCorreo.innerText = "";
     })
 
-    checkboxPoliticas.addEventListener("click", function(){
+    checkboxPoliticas.addEventListener("click", function () {
         alertaPoliticas.innerText = "";
     })
 
     btnSuscripcion.addEventListener("click", function (event) {
         event.preventDefault();
         console.log("click");
-        alertaSuscripcion.innerText= "";
-        alertaCorreo.innerText= "";
-        alertaPoliticas.innerText= "";
+        alertaSuscripcion.innerText = "";
+        alertaCorreo.innerText = "";
+        alertaPoliticas.innerText = "";
 
         if (!checkboxPoliticas.checked) {
             alertaPoliticas.style.color = "var(--rusty-red)";
-            alertaPoliticas.innerText= "Por favor, marque la casilla para continuar.";
+            alertaPoliticas.innerText = "Por favor, marque la casilla para continuar.";
             setTimeout(() => {
                 alertaPoliticas.innerText = "";
             }, 30000);
@@ -160,7 +160,7 @@ function addFooter() {
         }
         if (!regexEmail.test(inputCorreo.value)) {
             alertaCorreo.style.color = "var(--rusty-red)";
-            alertaCorreo.innerText= "Por favor, ingrese un correo válido.";
+            alertaCorreo.innerText = "Por favor, ingrese un correo válido.";
             setTimeout(() => {
                 alertaCorreo.innerText = "";
             }, 30000);
@@ -168,27 +168,27 @@ function addFooter() {
         }
         if (checkboxPoliticas.checked && regexEmail.test(inputCorreo.value)) {
             alertaSuscripcion.style.color = "var(--avocado)";
-            alertaSuscripcion.innerText= "Enviando datos...";
+            alertaSuscripcion.innerText = "Enviando datos...";
 
             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
                 .then(response => {
                     if (!response.ok) {
                         throw new Error("Error");
-                    }else{
-                    console.log("Todo bien: ", response);
-                    inputCorreo.value = "";
-                    checkboxPoliticas.checked = false;
-                    alertaSuscripcion.style.color = "var(--avocado)";
-                    alertaSuscripcion.innerText= "¡Suscripción exitosa!";
-                    setTimeout(() => {
-                        alertaSuscripcion.innerText = "";
-                    }, 30000);
+                    } else {
+                        console.log("Todo bien: ", response);
+                        inputCorreo.value = "";
+                        checkboxPoliticas.checked = false;
+                        alertaSuscripcion.style.color = "var(--avocado)";
+                        alertaSuscripcion.innerText = "¡Suscripción exitosa!";
+                        setTimeout(() => {
+                            alertaSuscripcion.innerText = "";
+                        }, 30000);
                     }
                 })
                 .catch(error => {
                     console.error("Error: ", error.message)
                     alertaSuscripcion.style.color = "var(--rusty-red)";
-                    alertaSuscripcion.innerText= "Por el momento el servicio no está disponible. Inténtelo más tarde";
+                    alertaSuscripcion.innerText = "Por el momento el servicio no está disponible. Inténtelo más tarde";
                     setTimeout(() => {
                         alertaSuscripcion.innerText = "";
                     }, 30000);
