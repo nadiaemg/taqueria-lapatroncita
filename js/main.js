@@ -90,7 +90,7 @@ function addFooter() {
                     </div>
                     <div class="checkbox-politicas">
                         <input type="checkbox" class="form-check-input" id="politicasSuscripcion" required />
-                        <label for="politicas" class="form-check-label widgets">He leído y acepto la
+                        <label for="politicasSuscripcion" class="form-check-label widgets">He leído y acepto la
                         <a href="politica.html" target="_blank">política de privacidad</a>.</label>
                     </div>
                 </form>
@@ -121,7 +121,7 @@ function addFooter() {
 
 window.addEventListener("load", function (event) {
     event.preventDefault;
-    //window.scrollTo(0,0);
+    window.scrollTo(0,0);
     addNavbar();
-    //addFooter();
+    addFooter();
 });
