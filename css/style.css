@@ -232,7 +232,7 @@ footer hr {
     padding-top: 1rem;
 }
 
-.email-contenedor input {
+.email-contenedor input[type="email"] {
     width: 65%;
     height: 5rem;
     background-color: var(--bistre);
@@ -258,6 +258,19 @@ footer hr {
     font-family: var(--lato);
     color: var(--saffron);
 }
+
+.email-contenedor input:-webkit-autofill,
+.email-contenedor input:-webkit-autofill:hover {
+  -webkit-text-fill-color: var(--dutch-white);
+  -webkit-box-shadow: 0 0 0px 1000px var(--bistre) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.email-contenedor input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--bistre);
+    -webkit-box-shadow: 0 0 0px 1000px var(--dutch-white) inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
 
 .checkbox-politicas {
     display: flex;
@@ -297,6 +310,7 @@ footer hr {
 
 .checkbox-politicas input[type="checkbox"]:focus {
     box-shadow: 0 0 5px var(--payne-gray);
+    background-color: var(--dutch-white);
 }
 
 .checkbox-politicas input[type="checkbox"]:checked::after {
