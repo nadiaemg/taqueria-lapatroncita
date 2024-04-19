@@ -6,7 +6,7 @@ let regexEmail = new RegExp("^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$")
 function addNavbar() {
     header.insertAdjacentHTML("afterbegin", `
     <nav id="navbar">
-        <a href="index.html"><img src="/src/img/logo.png" class="logo" alt="La patroncita" /></a>
+        <a href="index.html"><img src="./src/img/logo.png" class="logo" alt="La patroncita" /></a>
         <button class="abrir-menu" id="botonAbrir"><i class="bi bi-list" id="hamburguesa"></i></button>
         <ul class="nav-lista" id="navElementos">
             <button class="cerrar-menu" id="botonCerrar"><i class="bi bi-x"></i></button>
@@ -65,7 +65,7 @@ function addFooter() {
     <footer>
         <div class="footer-contenedor">
             <div class="logo-footer">
-                <img src="/src/img/logo.png" alt="La Patroncita" class="logo" />
+                <img src="./src/img/logo.png" alt="La Patroncita" class="logo" />
             </div>
             <div class="contacto-contenedor">
                 <h6>Contacto</h6>

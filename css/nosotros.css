@@ -1,9 +1,9 @@
-@import "/css/variables.css";
+@import "./css/variables.css";
 
 header{
     height: 100vh;
     height: 100dvh;
-    background-image: url(/src/img/nosotros.jpg);
+    background-image: url(./src/img/nosotros.jpg);
     background-color: #00000070;
     background-blend-mode: overlay;
     background-size: cover;
