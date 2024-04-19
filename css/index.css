@@ -2,6 +2,8 @@
 
 header{
     background-color: var(--bistre);
+    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 header h5, header h3 {
@@ -14,6 +16,10 @@ span{
 
 .encabezado {
     padding: 20rem 7% 0 7%;
+}
+
+.encabezado img{
+    max-width: 80rem;
 }
 
 .deslizar{

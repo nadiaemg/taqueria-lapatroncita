@@ -1,7 +1,7 @@
 const header = document.querySelector("header");
 const footer = document.querySelector("footer");
 let url = window.location.href;
-
+let regexEmail = new RegExp("^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$");
 
 function addNavbar() {
     header.insertAdjacentHTML("afterbegin", `
@@ -77,13 +77,11 @@ function addFooter() {
             </div>
             <div class="suscripcion-contenedor">
                 <h6>Recibe nuestras promociones</h6>
-                <form>
+                <form name="submit-to-google-sheet">
                     <div class="mb-3">
-                        <label for="correoSuscripcion" class="form-label widgets">Únete a la comunidad de suscriptores para recibir
-                        noticias y
-                        ofertas exclusivas.</label>
+                        <label for="correoSuscripcion" class="form-label widgets">Únete a la comunidad de suscriptores para recibir noticias y ofertas exclusivas.</label>
                         <div class="email-contenedor">
-                            <input type="email" class="form-control" id="correoSuscripcion" placeholder="Correo electrónico"
+                            <input type="email" class="form-control" id="correoSuscripcion" placeholder="Correo electrónico" name="email"
                                 required />
                             <button class="boton-amarillo" type="submit" id="btnSuscripcion">
                                 Suscribirse
@@ -91,7 +89,7 @@ function addFooter() {
                         </div>
                     </div>
                     <div class="checkbox-politicas">
-                        <input type="checkbox" class="form-check-input" id="politicas" required />
+                        <input type="checkbox" class="form-check-input" id="politicasSuscripcion" required />
                         <label for="politicas" class="form-check-label widgets">He leído y acepto la
                         <a href="politica.html" target="_blank">política de privacidad</a>.</label>
                     </div>
@@ -118,6 +116,7 @@ function addFooter() {
         </div>
     </footer>
     `;
+
 }
 
 window.addEventListener("load", function (event) {

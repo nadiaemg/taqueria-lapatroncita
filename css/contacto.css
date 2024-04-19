@@ -2,6 +2,7 @@
 
 header{
     height: 100vh;
+    height: 100dvh;
     background-image: url(/src/img/contacto.jpg);
     background-color: #00000070;
     background-blend-mode: overlay;
