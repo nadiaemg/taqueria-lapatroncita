@@ -10,10 +10,14 @@ html {
     padding: 0;
 }
 
+a{
+    color: var(--saffron);
+}
+
 h1 {
     font-size: var(--h1-size);
     font-family: var(--rufina);
-    line-height: 12rem;
+    line-height: var(--line-h1);
     font-weight: 700;
     color: var(--dutch-white);
 }
@@ -21,7 +25,7 @@ h1 {
 h2 {
     font-size: var(--h2-size);
     font-family: var(--rufina);
-    line-height: 10.5rem;
+    line-height: var(--line-h2);
     font-weight: 700;
     color: var(--bistre);
 }
@@ -29,7 +33,7 @@ h2 {
 h3 {
     font-size: var(--h3-size);
     font-family: var(--rufina);
-    line-height: 8.4rem;
+    line-height: var(--line-h3);
     font-weight: 700;
     color: var(--primary-text);
 }
@@ -37,7 +41,7 @@ h3 {
 h4 {
     font-size: var(--h4-size);
     font-family: var(--rufina);
-    line-height: 6.4rem;
+    line-height: var(--line-h4);
     font-weight: 700;
     color: var(--primary-text);
 }
@@ -45,7 +49,7 @@ h4 {
 h5 {
     font-size: var(--h5-size);
     font-family: var(--rufina);
-    line-height: 4.8rem;
+    line-height: var(--line-h5);
     font-weight: 700;
     color: var(--primary-text);
 }
@@ -53,7 +57,7 @@ h5 {
 h6 {
     font-size: var(--h6-size);
     font-family: var(--rufina);
-    line-height: 4.8rem;
+    line-height: var(--line-h6);
     font-weight: 700;
     color: var(--primary-text);
 }
@@ -61,7 +65,7 @@ h6 {
 p {
     font-size: var(--body);
     font-family: var(--lato);
-    line-height: 3.3rem;
+    line-height: var(--line-body);
     font-weight: 400;
     color: var(--primary-text);
 }
@@ -69,9 +73,18 @@ p {
 .widgets {
     font-size: var(--widget);
     font-family: var(--lato);
-    line-height: 2.5rem;
+    line-height: var(--line-widget);
     font-weight: 400;
     color: var(--dutch-white);
+    margin: 0;
+}
+
+.widget-alert {
+    font-size: var(--widget);
+    font-family: var(--lato);
+    line-height: var(--line-widget);
+    font-weight: 700;
+    color: var(--rusty-red);
     margin: 0;
 }
 
@@ -80,6 +93,7 @@ p {
     flex-direction: column;
     align-items: center;
     margin-bottom: 5rem;
+    text-align: center;
 }
 
 /*Barra de navegación*/
@@ -169,7 +183,7 @@ nav {
     border: 0;
     font-size: var(--h6-size);
     line-height: 4.8rem;
-    color: #f2be13;
+    color: var(--saffron);
     background-color: transparent;
     cursor: pointer;
 }
@@ -350,18 +364,18 @@ footer hr {
 }
 
 .boton-verde {
-    width: 16rem;
+    width: 18rem;
     height: 5rem;
     border: solid 2px var(--avocado);
     border-radius: 0%;
     background-color: var(--avocado);
-    color: var(--dutch-white);
+    color: var(--white);
     font-size: var(--body);
     font-family: var(--rufina);
 }
 
 .boton-naranja {
-    width: 16rem;
+    width: 18rem;
     height: 5rem;
     border: solid 2px var(--spanish-orange);
     border-radius: 0%;
@@ -377,34 +391,42 @@ footer hr {
     /*Estilos generales*/
     h6 {
         font-size: var(--h6-size-sm);
+        line-height: var(--line-h6-sm);
     }
 
     h5 {
         font-size: var(--h5-size-sm);
+        line-height: var(--line-h5-sm);
     }
 
     h4 {
         font-size: var(--h4-size-sm);
+        line-height: var(--line-h4-sm);
     }
 
     h3 {
         font-size: var(--h3-size-sm);
+        line-height: var(--line-h3-sm);
     }
 
     h2 {
         font-size: var(--h2-size-sm);
+        line-height: var(--line-h2-sm);
     }
 
     h1 {
         font-size: var(--h1-size-sm);
+        line-height: var(--line-h1-sm);
     }
 
     p {
         font-size: var(--body-sm);
+        line-height: var(--line-body-sm);
     }
 
     .widgets {
         font-size: var(--widget-sm);
+        line-height: var(--line-widget-sm);
     }
 
     /*Barra de navegación*/

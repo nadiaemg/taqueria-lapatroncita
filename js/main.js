@@ -66,7 +66,6 @@ function addNavbar() {
 
 function addFooter() {
     footer.innerHTML = `
-    <footer>
         <div class="footer-contenedor">
             <div class="logo-footer">
                 <img src="./src/img/logo.png" alt="La Patroncita" class="logo" />
@@ -85,7 +84,7 @@ function addFooter() {
                     <div class="mb-3">
                         <label for="correoSuscripcion" class="form-label widgets">Únete a la comunidad de suscriptores para recibir noticias y ofertas exclusivas.</label>
                         <p class="widgets" id="alertaSuscripcion" style="font-weight: 700;"></p>
-                        <p class="widgets" id="alertaCorreo" style="font-weight: 700;"></p>
+                        <p class="widgets" id="alertaCorreoSus" style="font-weight: 700;"></p>
                         <div class="email-contenedor">
                             <input type="email" class="form-control" id="correoSuscripcion" placeholder="Correo electrónico" name="email" autocomplete="email"
                                 required />
@@ -123,12 +122,11 @@ function addFooter() {
                 </li>
             </ul>
         </div>
-    </footer>
     `;
 
     /*Formulario de suscripción*/
     const alertaSuscripcion = document.getElementById("alertaSuscripcion");
-    const alertaCorreo = document.getElementById("alertaCorreo");
+    const alertaCorreoSus = document.getElementById("alertaCorreoSus");
     const alertaPoliticas = document.getElementById("alertaPoliticas");
     const btnSuscripcion = document.getElementById("btnSuscripcion");
     const inputCorreo = document.getElementById("correoSuscripcion");
@@ -136,7 +134,7 @@ function addFooter() {
     const form = document.forms['submit-to-google-sheet'];
 
     inputCorreo.addEventListener("change", function () {
-        alertaCorreo.innerText = "";
+        alertaCorreoSus.innerText = "";
     })
 
     checkboxPoliticas.addEventListener("click", function () {
@@ -147,7 +145,7 @@ function addFooter() {
         event.preventDefault();
         console.log("click");
         alertaSuscripcion.innerText = "";
-        alertaCorreo.innerText = "";
+        alertaCorreoSus.innerText = "";
         alertaPoliticas.innerText = "";
 
         if (!checkboxPoliticas.checked) {
@@ -159,10 +157,10 @@ function addFooter() {
             checkboxPoliticas.focus();
         }
         if (!regexEmail.test(inputCorreo.value)) {
-            alertaCorreo.style.color = "var(--rusty-red)";
-            alertaCorreo.innerText = "Por favor, ingrese un correo válido.";
+            alertaCorreoSus.style.color = "var(--rusty-red)";
+            alertaCorreoSus.innerText = "Por favor, ingrese un correo válido.";
             setTimeout(() => {
-                alertaCorreo.innerText = "";
+                alertaCorreoSus.innerText = "";
             }, 30000);
             inputCorreo.focus();
         }

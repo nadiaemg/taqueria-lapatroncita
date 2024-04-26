@@ -1,6 +1,6 @@
 @import "variables.css";
 
-header{
+header {
     height: 100vh;
     height: 100dvh;
     background-image: url(../src/img/contacto.jpg);
@@ -15,7 +15,7 @@ header h5 {
     color: var(--dutch-white);
 }
 
-.encabezado{
+.encabezado {
     height: 100%;
     padding-left: 7%;
     padding-right: 7%;
@@ -24,27 +24,25 @@ header h5 {
     justify-content: center;
 }
 
-.deslizar{
+.deslizar {
     transform: rotate(90deg);
     align-self: flex-start;
 }
 
-.formulario-contenedor{
+/*Sección formulario*/
+.formulario-contenedor {
     background-color: var(--dutch-white);
     padding: 19.5rem 7% 7% 3.5rem;
     padding-left: 7%;
     padding-right: 7%;
 }
 
-.formulario-contenedor form label{
+.formulario-contenedor form label {
     font-size: var(--body-sm);
-}
-.boton-contacto{
-    display: flex;
-    justify-content: center;
+    line-height: var(--line-body-sm);
 }
 
-.formulario-contenedor input{
+.formulario-contenedor input {
     height: 5rem;
     background-color: var(--dutch-white);
     border-radius: 0%;
@@ -52,12 +50,12 @@ header h5 {
     color: var(--bistre);
     font-size: var(--widget);
     font-family: var(--lato);
-    line-height: 3.3rem;
+    line-height: var(--line-body);
     font-weight: 400;
     padding-left: 1.6rem;
 }
 
-.formulario-contenedor textarea{
+.formulario-contenedor textarea {
     max-height: 20rem;
     background-color: var(--dutch-white);
     border-radius: 0%;
@@ -68,7 +66,6 @@ header h5 {
     line-height: 3.3rem;
     font-weight: 400;
     padding-left: 1.6rem;
-    margin-bottom: 3rem;
 }
 
 .formulario-contenedor input:focus,
@@ -93,21 +90,25 @@ header h5 {
 
 .formulario-contenedor input:-webkit-autofill,
 .formulario-contenedor input:-webkit-autofill:hover {
-  -webkit-text-fill-color: var(--bistre);
-  -webkit-box-shadow: 0 0 0px 1000px var(--dutch-white) inset;
-  transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: var(--bistre);
+    -webkit-box-shadow: 0 0 0px 1000px var(--dutch-white) inset;
+    transition: background-color 5000s ease-in-out 0s;
 }
 
 .formulario-contenedor input:-webkit-autofill:focus {
     -webkit-text-fill-color: var(--bistre);
     -webkit-box-shadow: 0 0 0px 1000px var(--white) inset;
     transition: background-color 5000s ease-in-out 0s;
-  }
+}
 
-  .contacto-politicas {
+.contacto-politicas {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
+}
+
+.contacto-politicas p {
+    width: 100%;
 }
 
 .contacto-politicas input[type="checkbox"] {
@@ -148,4 +149,35 @@ header h5 {
 
 .contacto-politicas input[type="checkbox"]:checked::after {
     display: block;
+}
+
+.boton-contacto {
+    display: flex;
+    justify-content: center;
+}
+
+/*Modal de envío de formulario*/
+.modal-dialog{
+    margin-top: 5rem;
+}
+.modal-content{
+    box-shadow: 0 0 0 100vmax #381a0580;
+    border-radius: 0;
+}
+.modal-header{
+    background-color: var(--avocado);
+    border-radius: 0;
+}
+.modal-title{
+    color: var(--dutch-white);
+}
+.btn-close:focus {
+    outline-color: var(--dutch-white);
+    box-shadow: 0 0 0 0.1rem var(--dutch-white);
+  }
+.modal-body p{
+    color: var(--bistre);
+}
+.modal-footer{
+    border-top: none;
 }

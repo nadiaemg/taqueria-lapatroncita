@@ -4,17 +4,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Rufina:wght@400;700&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/contacto.css">
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/contacto.css" />
   <title>La Patroncita - Contacto</title>
 </head>
 
@@ -22,14 +22,16 @@
   <header>
     <div class="encabezado">
       <h1>Contacto</h1>
-      <h5>Ven a conocernos y a disfrutar los platillos que tenemos para ti</h5>
+      <h5>
+        Ven a conocernos y a disfrutar los platillos que tenemos para ti
+      </h5>
     </div>
     <div>
       <div>
         <h5>Horario de apertura</h5>
         <p>Jueves a Domingo</p>
       </div>
-      <hr>
+      <hr />
       <div>
         <p>Horario</p>
         <p>18:00 a 20:00</p>
@@ -41,7 +43,7 @@
   <main>
     <section>
       <div>
-        <img src="#" alt="Contacto">
+        <img src="#" alt="Contacto" />
         <h2>Medios de contacto</h2>
         <h5>Puedes contactarnos a través de:</h5>
         <ul>
@@ -55,60 +57,100 @@
             <h5>WhatsApp: <span></span></h5>
           </li>
         </ul>
-        <button type="button" id="ordenarWhatsapp" class="boton-verde">Ordene Ahora</button>
+        <button type="button" id="ordenarWhatsapp" class="boton-verde">
+          Ordene Ahora
+        </button>
       </div>
       <div>
         <h5>Nos encontramos en</h5>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.916435027431!2d-99.10320332573917!3d19.416016241212166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fc1e17c653bb%3A0x905cfbb800118c60!2sTaquer%C3%ADa%20La%20Patroncita!5e0!3m2!1ses-419!2smx!4v1712951154582!5m2!1ses-419!2smx"
-          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+          width="100%" height="300" style="border: 0" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div>
         <h4>Redes Sociales</h4>
         <ul>
-          <li><a href="https://www.facebook.com/profile.php?id=100064276886596" target="_blank">Facebook</a></li>
-          <li><a href="https://www.instagram.com/taquerialapatroncita/" target="_blank">Instagram</a></li>
-          <li><a href="https://wa.me/message/7MHHJSHGDGEDG1" target="_blank">WhatsApp</a></li>
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=100064276886596" target="_blank">Facebook</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/taquerialapatroncita/" target="_blank">Instagram</a>
+          </li>
+          <li>
+            <a href="https://wa.me/message/7MHHJSHGDGEDG1" target="_blank">WhatsApp</a>
+          </li>
         </ul>
       </div>
     </section>
     <section class="formulario-contenedor">
       <div class="header-section-a">
         <h2>Contáctanos</h2>
-        <p>
-          Estaremos encantadas de responder todas tus dudas.
-        </p>
+        <p>Estaremos encantadas de responder todas las dudas que tenga.</p>
       </div>
       <form>
         <div class="mb-5">
           <label for="nombre" class="form-label">Nombre Completo</label>
-          <input type="text" class="form-control" id="nombre" placeholder="Nombre(s) y Apellido(s)" autocomplete="name" required>
+          <input type="text" class="form-control" id="nombre" placeholder="Su nombre(s) y apellido(s)"
+            autocomplete="name" required />
+          <p class="widget-alert" id="alertaNombre"></p>
         </div>
         <div class="mb-5">
           <label for="correo" class="form-label">Correo electrónico</label>
-          <input type="email" class="form-control" id="correo" placeholder="correo@ejemplo.com" autocomplete="email" required>
+          <input type="email" class="form-control" id="correo" placeholder="correo@ejemplo.com" autocomplete="email"
+            required />
+          <p class="widget-alert" id="alertaCorreo"></p>
         </div>
         <div class="mb-5">
           <label for="telefono" class="form-label">Teléfono de contacto</label>
-          <input type="text" class="form-control" id="telefono" placeholder="Número a 10 dígitos" maxlength="10" autocomplete="tel" required>
+          <input type="tel" class="form-control" id="telefono" placeholder="Número a 10 dígitos" maxlength="10"
+            autocomplete="tel" required />
+          <p class="widget-alert" id="alertaTel"></p>
         </div>
         <div class="mb-5">
-          <label for="comentario" class="form-label">Mensaje</label>
-          <textarea name="comentario" class="form-control" id="comentario" cols="30" rows="10" placeholder="Escriba su mensaje aquí." autocomplete="none"
-            required></textarea>
+          <label for="asunto" class="form-label">Asunto</label>
+          <input type="text" class="form-control" id="asunto" placeholder="¿En qué podemos ayudarle?"
+            autocomplete="none" required />
+          <p class="widget-alert" id="alertaAsunto"></p>
+        </div>
+        <div class="mb-5">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea name="mensaje" class="form-control" id="mensaje" cols="30" rows="10"
+            placeholder="Escriba su mensaje completo aquí." autocomplete="none" required></textarea>
+          <p class="widget-alert" id="alertaMensaje"></p>
         </div>
         <div class="contacto-politicas mb-5">
-          <input type="checkbox" class="form-check-input" id="politicas" required>
-          <label for="politicas" class="form-check-label">He leído y acepto la <a href="politica.html" target="_blank">política de
-              privacidad</a>.</label>
+          <input type="checkbox" class="form-check-input" id="politicas" required />
+          <label for="politicas" class="form-check-label">He leído y acepto la
+            <a href="politica.html" target="_blank">política de privacidad</a>.</label>
+          <p class="widget-alert" id="alertaCheck"></p>
         </div>
         <div class="boton-contacto">
-          <button type="submit" class="boton-naranja" id="enviarFormulario">Enviar</button>
+          <button type="submit" class="boton-naranja" id="enviarFormulario">
+            Enviar
+          </button>
         </div>
       </form>
     </section>
   </main>
+
+  <!-- Modal -->
+  <div class="modal fade" id="contactoModal" tabindex="-1" aria-labelledby="modalTitulo">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title" id="modalTitulo"></h6>
+          <button type="button" class="btn-close" id="cerrarModal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="modalTexto">Su mensaje se envió con éxito.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="aceptarModal" aria-label="Close">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <footer></footer>
 
@@ -120,6 +162,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
     crossorigin="anonymous"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="./js/contacto.js"></script>
 </body>
 
