@@ -35,8 +35,7 @@ const expresiones = {
 
 /*Validaciones*/
 function validarNombre() {
-    nombre.value = nombre.value.trim();
-    if (nombre.value.length >= 3 && expresiones.regexNombre.test(nombre.value)) {
+    if (nombre.value.trim().length >= 3 && expresiones.regexNombre.test(nombre.value)) {
         alertaNombre.innerText = "";
         return true;
     } else {
@@ -51,8 +50,7 @@ function validarNombre() {
 }
 
 function validarCorreo() {
-    correo.value = correo.value.trim();
-    if (expresiones.regexCorreo.test(correo.value)) {
+    if (expresiones.regexCorreo.test(correo.value.trim())) {
         alertaCorreo.innerText = "";
         return true;
     } else {
@@ -67,8 +65,7 @@ function validarCorreo() {
 }
 
 function validarTel() {
-    telefono.value = telefono.value.trim();
-    if (expresiones.regexTel.test(telefono.value)) {
+    if (expresiones.regexTel.test(telefono.value.trim())) {
         alertaTel.innerText = "";
         return true;
     } else {
@@ -83,8 +80,7 @@ function validarTel() {
 }
 
 function validarAsunto() {
-    asunto.value = asunto.value.trim();
-    if (asunto.value.length >= 5 && expresiones.regexAsunto.test(asunto.value)) {
+    if (asunto.value.trim().length >= 5 && expresiones.regexAsunto.test(asunto.value.trim())) {
         alertaAsunto.innerText = "";
         return true;
     } else {
@@ -99,8 +95,7 @@ function validarAsunto() {
 }
 
 function validarMensaje() {
-    mensaje.value = mensaje.value.trim();
-    if (mensaje.value.length >= 5 && expresiones.regexMensaje.test(nombre.value)) {
+    if (mensaje.value.trim().length >= 5 && expresiones.regexMensaje.test(nombre.value.trim())) {
         alertaMensaje.innerText = "";
         return true;
     } else {
@@ -120,7 +115,7 @@ function validarAceptarPoliticas() {
         return true;
     } else {
         alertaCheck.innerText = "Marque la casilla para continuar.";
-        //politicas.focus();
+        politicas.focus();
         setTimeout(() => {
             alertaCheck.innerText = "";
         }, 60000);
@@ -194,6 +189,12 @@ asunto.addEventListener('input', () => { validarAsunto(); });
 mensaje.addEventListener('input', () => { validarMensaje(); });
 politicas.addEventListener('click', () => { alertaCheck.innerText = ""; });
 
+nombre.addEventListener('blur', () => { nombre.value = nombre.value.trim(); });
+correo.addEventListener('blur', () => { correo.value = correo.value.trim(); });
+telefono.addEventListener('blur', () => { telefono.value = telefono.value.trim(); });
+asunto.addEventListener('blur', () => { asunto.value = asunto.value.trim(); });
+mensaje.addEventListener('blur', () => { mensaje.value = mensaje.value.trim(); });
+
 btnContacto.addEventListener('click', function (event) {
     event.preventDefault();
 
@@ -207,6 +208,11 @@ btnContacto.addEventListener('click', function (event) {
     /*Envío de formulario de contacto si se aceptan validaciones*/
     if(validarNombre() && validarCorreo() && validarTel() && validarAsunto() && validarMensaje() && validarAceptarPoliticas()){
         console.log("Campos válidos");
+        nombre.value = nombre.value.trim();
+        correo.value = correo.value.trim();
+        telefono.value = telefono.value.trim();
+        asunto.value = asunto.value.trim();
+        mensaje.value = mensaje.value.trim();
         enviarMensaje();
     }
 });
