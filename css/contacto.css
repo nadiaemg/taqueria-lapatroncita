@@ -11,8 +11,148 @@ header {
     background-repeat: no-repeat;
 }
 
-header h5 {
+header h5, header h6, header p {
     color: var(--dutch-white);
+}
+
+.encabezado hr{
+    border: dashed 1px var(--dutch-white);
+}
+
+.horario{
+    width: 30%;
+    text-align: end;
+    position: absolute;
+    bottom: 7%;
+    right: 7%;
+}
+
+.horario > *{
+    margin: 0;
+}
+
+.header-section-a h2{
+    z-index: 1;
+}
+
+.contacto {
+    margin: 0 7% 5rem 7%;
+    position: relative;
+}
+
+.informacion-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    margin-bottom: 5rem;
+    padding-top: 15rem;
+}
+
+.contacto > img{
+    width: 28rem;
+    position: absolute;
+    left: 37%;
+    top: 12rem;
+    bottom: 76.66%;
+    z-index: -1;
+}
+
+.imagen-contacto{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.imagen-contacto img {
+    max-height: 400px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.informacion-contacto h2 {
+    text-align: end;
+    margin-bottom: 4rem;
+}
+
+.medios-contacto {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.medios-contacto div ul li p {
+    margin-bottom: 0;
+}
+
+.medios-contacto div ul li p span {
+    color: var(--avocado);
+    font-weight: 700;
+}
+
+.medios-contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton-verde{
+    margin-top: 4rem;
+}
+
+.mapa-contacto,
+.redes-contacto {
+    margin: 0 7% 3rem 7%;
+}
+
+iframe{
+    margin: 2rem 0 2rem 0;
+    width: 100%;
+    height: 30rem;
+    border: 0;
+}
+
+.redes-contacto h5{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.redes-contacto ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.redes-contacto ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 0;
+}
+
+.redes-contacto ul li a {
+    text-decoration: none;
+    font-size: var(--h4-size);
+}
+
+.instagram{
+    color: var(--spanish-orange);
+}
+.whatsapp{
+    color: var(--avocado);
+}
+
+.menta {
+    width: 30rem;
+    position: absolute;
+    top: 3.64%;
+    bottom: 73.41%;
 }
 
 .encabezado {
@@ -22,19 +162,14 @@ header h5 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.deslizar {
-    transform: rotate(90deg);
-    align-self: flex-start;
+    position: relative;
 }
 
 /*Sección formulario*/
 .formulario-contenedor {
+    position: relative;
     background-color: var(--dutch-white);
-    padding: 19.5rem 7% 7% 3.5rem;
-    padding-left: 7%;
-    padding-right: 7%;
+    padding: 19.5rem 7% 5% 7%;
 }
 
 .formulario-contenedor form label {
@@ -157,27 +292,98 @@ header h5 {
 }
 
 /*Modal de envío de formulario*/
-.modal-dialog{
+.modal-dialog {
     margin-top: 5rem;
 }
-.modal-content{
+
+.modal-content {
     box-shadow: 0 0 0 100vmax #381a0580;
     border-radius: 0;
+    border: none;
 }
-.modal-header{
+
+.modal-header {
     background-color: var(--avocado);
     border-radius: 0;
 }
-.modal-title{
+
+.modal-title {
     color: var(--dutch-white);
 }
+
 .btn-close:focus {
     outline-color: var(--dutch-white);
     box-shadow: 0 0 0 0.1rem var(--dutch-white);
-  }
-.modal-body p{
+}
+
+.modal-body p {
     color: var(--bistre);
 }
-.modal-footer{
+
+.modal-footer {
     border-top: none;
+}
+
+/*Extra extra large*/
+@media (min-width: 1920px){
+    .contacto,
+    .redes-contacto,
+    .mapa-contacto {
+        margin-left: 36rem;
+        margin-right: 36rem;
+    }
+
+    .formulario-contenedor{
+        padding-left: 36rem;
+        padding-right: 36rem;
+    }
+
+    .medios-contacto h2{
+        text-align: center;
+    }
+}
+
+/*Large*/
+@media (max-width: 1400px){
+    .contacto > img{
+        left: 36%;
+        top: 6rem;
+    }
+}
+
+/*Medium & small*/
+@media (max-width: 992px){
+    .informacion-contacto {
+        grid-template-columns: auto;
+        padding-top: 11rem;
+    }
+
+    .imagen-contacto{
+        order: 2;
+    }
+
+    .medios-contacto h2{
+        text-align: center;
+    }
+
+    .contacto > img{
+        left: 24%;
+        width: 20rem;
+    }
+
+    .boton-verde{
+        margin-top: 2rem;
+    }
+
+    .informacion-contacto h2 {
+        margin-bottom: 2rem;
+    }
+
+    .redes-contacto ul {
+        gap: 5rem;
+    }
+
+    .horario{
+        width: 50%;
+    }
 }

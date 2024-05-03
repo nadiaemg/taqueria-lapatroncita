@@ -44,7 +44,7 @@ function validarNombre() {
         nombre.focus();
         setTimeout(() => {
             alertaNombre.innerText = "";
-        }, 30000);
+        }, 60000);
         console.log("nombre no valido");
         return false;
     }
@@ -60,7 +60,7 @@ function validarCorreo() {
         correo.focus();
         setTimeout(() => {
             alertaCorreo.innerText = "";
-        }, 30000);
+        }, 60000);
         console.log("correo no valido");
         return false;
     }
@@ -76,7 +76,7 @@ function validarTel() {
         telefono.focus();
         setTimeout(() => {
             alertaTel.innerText = "";
-        }, 30000);
+        }, 60000);
         console.log("tel no valido");
         return false;
     }
@@ -92,7 +92,7 @@ function validarAsunto() {
         asunto.focus();
         setTimeout(() => {
             alertaAsunto.innerText = "";
-        }, 30000);
+        }, 60000);
         console.log("asunto no valido");
         return false;
     }
@@ -108,7 +108,7 @@ function validarMensaje() {
         mensaje.focus();
         setTimeout(() => {
             alertaMensaje.innerText = "";
-        }, 30000);
+        }, 60000);
         console.log("msj no valido");
         return false;
     }
@@ -123,7 +123,7 @@ function validarAceptarPoliticas() {
         //politicas.focus();
         setTimeout(() => {
             alertaCheck.innerText = "";
-        }, 30000);
+        }, 60000);
         console.log("nocheck");
         return false;
     }

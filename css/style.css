@@ -11,7 +11,12 @@ html {
 }
 
 a{
+    color: var(--payne-gray);
+}
+
+a:hover{
     color: var(--saffron);
+    transition: 0.3s ease-in;
 }
 
 h1 {
@@ -363,6 +368,11 @@ footer hr {
     font-family: var(--rufina);
 }
 
+.boton-amarillo:hover{
+    background-color: transparent;
+    color: var(--saffron);
+}
+
 .boton-verde {
     width: 18rem;
     height: 5rem;
@@ -374,6 +384,11 @@ footer hr {
     font-family: var(--rufina);
 }
 
+.boton-verde:hover{
+    background-color: transparent;
+    color: var(--avocado);
+}
+
 .boton-naranja {
     width: 18rem;
     height: 5rem;
@@ -383,6 +398,11 @@ footer hr {
     color: var(--dutch-white);
     font-size: var(--body);
     font-family: var(--rufina);
+}
+
+.boton-naranja:hover{
+    background-color: transparent;
+    color: var(--spanish-orange);
 }
 
 /*MediaQueries*/

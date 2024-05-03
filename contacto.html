@@ -22,69 +22,80 @@
   <header>
     <div class="encabezado">
       <h1>Contacto</h1>
-      <h5>
-        Ven a conocernos y a disfrutar los platillos que tenemos para ti
-      </h5>
-    </div>
-    <div>
-      <div>
-        <h5>Horario de apertura</h5>
+      <h5>Ven a conocernos y a disfrutar los platillos que tenemos para ti</h5>
+      <div class="horario">
+        <h6>Horario de apertura</h6>
+        <hr />
         <p>Jueves a Domingo</p>
-      </div>
-      <hr />
-      <div>
-        <p>Horario</p>
         <p>18:00 a 20:00</p>
       </div>
     </div>
-    <h5 class="deslizar">Deslice ------ ></h5>
   </header>
-  <a href="navegacion.html">Aqui</a>
+
   <main>
-    <section>
-      <div>
-        <img src="#" alt="Contacto" />
-        <h2>Medios de contacto</h2>
-        <h5>Puedes contactarnos a través de:</h5>
-        <ul>
-          <li>
-            <h5>Correo electrónico: <span></span></h5>
-          </li>
-          <li>
-            <h5>Teléfono: <span></span></h5>
-          </li>
-          <li>
-            <h5>WhatsApp: <span></span></h5>
-          </li>
-        </ul>
-        <button type="button" id="ordenarWhatsapp" class="boton-verde">
-          Ordene Ahora
-        </button>
-      </div>
-      <div>
-        <h5>Nos encontramos en</h5>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.916435027431!2d-99.10320332573917!3d19.416016241212166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fc1e17c653bb%3A0x905cfbb800118c60!2sTaquer%C3%ADa%20La%20Patroncita!5e0!3m2!1ses-419!2smx!4v1712951154582!5m2!1ses-419!2smx"
-          width="100%" height="300" style="border: 0" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <div>
-        <h4>Redes Sociales</h4>
-        <ul>
-          <li>
-            <a href="https://www.facebook.com/profile.php?id=100064276886596" target="_blank">Facebook</a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/taquerialapatroncita/" target="_blank">Instagram</a>
-          </li>
-          <li>
-            <a href="https://wa.me/message/7MHHJSHGDGEDG1" target="_blank">WhatsApp</a>
-          </li>
-        </ul>
+    <section class="contacto">
+      <img src="./src/img/naranja.png" alt="Taqueria">
+      <div class="informacion-contacto">
+        <div class="imagen-contacto">
+          <img src="./src/img/medios.jpg" alt="Contacto" />
+        </div>
+        <div class="medios-contacto">
+          <div>
+            <h2>Medios de contacto</h2>
+          </div>
+          <div class="medios-contenido">
+            <div>
+              <h6>Puedes contactarnos a través de:</h6>
+              <ul>
+                <li>
+                  <p>Correo electrónico: <span></span></p>
+                </li>
+                <li>
+                  <p>Teléfono: <span>55 2212 8893</span></p>
+                </li>
+                <li>
+                  <p>WhatsApp: <span>55 2212 8893</span></p>
+                </li>
+              </ul>
+            </div>
+            <button type="button" id="ordenarWhatsapp" class="boton-verde">
+              Ordene Ahora
+            </button>
+          </div>
+        </div>
       </div>
     </section>
+
+    <section class="redes-contacto">
+      <h5>Redes Sociales</h5>
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/profile.php?id=100064276886596" target="_blank" class="facebook"><i
+              class="bi bi-facebook"></i></a></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/taquerialapatroncita/" target="_blank" class="instagram"><i
+              class="bi bi-instagram"></i></a>
+        </li>
+        <li>
+          <a href="https://wa.me/message/7MHHJSHGDGEDG1" target="_blank" class="whatsapp"><i
+              class="bi bi-whatsapp"></i></a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="mapa-contacto">
+      <h6>Nos encontramos en:</h6>
+      <p>Rtno. 29 Fray Servando Teresa de Mier #21, Colonia Jardín Balbuena, Alcaldía Venustiano Carranza, C.P. 15900,
+        Ciudad de México.</p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.916435027431!2d-99.10320332573917!3d19.416016241212166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fc1e17c653bb%3A0x905cfbb800118c60!2sTaquer%C3%ADa%20La%20Patroncita!5e0!3m2!1ses-419!2smx!4v1712951154582!5m2!1ses-419!2smx"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
     <section class="formulario-contenedor">
       <div class="header-section-a">
+        <img class="menta" src="./src/img/menta.png" alt="menta">
         <h2>Contáctanos</h2>
         <p>Estaremos encantadas de responder todas las dudas que tenga.</p>
       </div>
@@ -143,7 +154,7 @@
           <button type="button" class="btn-close" id="cerrarModal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p id="modalTexto">Su mensaje se envió con éxito.</p>
+          <p class="widgets" id="modalTexto"></p>
         </div>
         <div class="modal-footer">
           <button type="button" id="aceptarModal" aria-label="Close">Aceptar</button>
