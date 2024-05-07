@@ -1,5 +1,3 @@
-@import "variables.css";
-
 header {
     height: 100vh;
     height: 100dvh;
@@ -102,8 +100,7 @@ header h5, header h6, header p {
     margin-top: 4rem;
 }
 
-.mapa-contacto,
-.redes-contacto {
+.mapa-contacto {
     margin: 0 7% 3rem 7%;
 }
 
@@ -112,40 +109,6 @@ iframe{
     width: 100%;
     height: 30rem;
     border: 0;
-}
-
-.redes-contacto h5{
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.redes-contacto ul {
-    display: flex;
-    flex-direction: row;
-    gap: 10rem;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-}
-
-.redes-contacto ul li {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 0;
-}
-
-.redes-contacto ul li a {
-    text-decoration: none;
-    font-size: var(--h4-size);
-}
-
-.instagram{
-    color: var(--spanish-orange);
-}
-.whatsapp{
-    color: var(--avocado);
 }
 
 .menta {
@@ -328,14 +291,10 @@ iframe{
 @media (min-width: 1920px){
     .contacto,
     .redes-contacto,
-    .mapa-contacto {
+    .mapa-contacto,
+    .formulario-contenedor {
         margin-left: 36rem;
         margin-right: 36rem;
-    }
-
-    .formulario-contenedor{
-        padding-left: 36rem;
-        padding-right: 36rem;
     }
 
     .medios-contacto h2{
@@ -377,10 +336,6 @@ iframe{
 
     .informacion-contacto h2 {
         margin-bottom: 2rem;
-    }
-
-    .redes-contacto ul {
-        gap: 5rem;
     }
 
     .horario{

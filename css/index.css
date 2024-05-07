@@ -1,28 +1,145 @@
-@import "variables.css";
-
 header{
     background-color: var(--bistre);
-    min-height: 100vh;
-    min-height: 100dvh;
+    /*min-height: 100vh;
+    min-height: 100dvh;*/
 }
 
 header h5, header h3 {
     color: var(--dutch-white);
 }
 
-span{
+.titulo-beige span{
     color: var(--saffron);
 }
 
 .encabezado {
-    padding: 20rem 7% 0 7%;
+    padding: 20rem 7% 10rem 7%;
+    /*position: relative;*/
+    background-image: url(../src/img/naranja-b.png);
+    background-position: center;
+    background-size: 25%;
+    background-repeat: no-repeat;
 }
 
-.encabezado img{
-    max-width: 80rem;
+.encabezado h1{
+    position: relative;
+    z-index: 1;
 }
 
-.deslizar{
+.encabezado-contenido{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+}
+
+.encabezado-imagen img{
+    width: 100%;
+    height: auto;
+    margin-top: -12rem;
+}
+
+/*.deslizar{
     transform: rotate(90deg);
     align-self: flex-start;
+}*/
+
+main{
+    margin: 10rem 7% 10rem 7%;
+}
+
+.platillos-principales,
+.cualidades{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5rem;
+    margin-bottom: 5rem;
+}
+
+.platillo{
+    position: relative;
+}
+
+.platillo h4{
+    position: absolute;
+    top: 4rem;
+    left: 5rem;
+}
+
+.platillo img{
+    width: 100%;
+    height: 70rem;
+    object-fit: cover;
+}
+
+.boton-menu{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.boton-naranja{
+    width: 27rem;
+}
+
+.cualidad{
+    text-align: center;
+}
+
+
+.carrusel{
+    margin-top: 7rem;
+    margin-bottom: 10rem;
+}
+
+.carousel-inner img{
+    width: 100%;
+    height: 70rem;
+    object-fit: cover;
+}
+
+/*Extra extra large*/
+@media (min-width: 1920px){
+    .encabezado{
+        padding-top: 30rem
+    }
+    .encabezado h1{
+        font-size: var(--hero-size);
+        line-height: var(--hero-line);
+    }
+}
+
+/*Large*/
+@media (max-width: 1400px){
+    .platillo img{
+        height: 50rem;
+    }
+    /*.carousel-inner img{
+        object-fit: contain;
+    }*/
+}
+
+/*Medium & small*/
+@media (max-width: 992px){
+    .encabezado{
+        padding-top: 18rem;
+        padding-bottom: 5rem;
+    }
+    .encabezado-contenido,
+    .platillos-principales,
+    .cualidades{
+        grid-template-columns: auto;
+        gap: 5rem;
+    }
+    .encabezado h1{
+        font-size: var(--h2-size-sm);
+        line-height: var(--line-h2-sm);
+    }
+    .encabezado h3{
+        font-size: var(--h4-size-sm);
+        line-height: var(--line-h4-sm);
+    }
+    .encabezado-imagen img{
+        margin-top: 0;
+    }
 }
