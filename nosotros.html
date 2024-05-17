@@ -28,8 +28,8 @@
   </header>
 
   <main>
-    <section>
-      <div>
+    <section class="historia">
+      <div class="nuestra-historia">
         <div class="header-section-b">
           <h2>Nuestra historia</h2>
           <p>
@@ -39,7 +39,7 @@
             animi dolores quis alias.
           </p>
         </div>
-        <img src="#" alt="" />
+        <img src="./src/img/ejemplo3.jpeg" alt="" />
       </div>
       <div>
         <h3>La Patroncita Original</h3>
@@ -63,15 +63,33 @@
       </div>
     </section>
 
-    <section>
+    <section class="video-historia">
       <div class="header-section-a">
         <h2>Posible video de comida</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <img src="#" alt="Reproducir" />
+        <button class="boton-reproducir" type="button" data-bs-toggle="modal" data-bs-target="#videoModal"><i class="bi bi-play-circle"></i></button>
+      </div>
+
+      <!--Modal-->
+      <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoTitulo" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title" id="videoTitulo">¿Cómo preparamos los alimentos?</h6>
+              <button type="button" class="boton-cruz" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="modal-body">
+              <iframe src="https://www.youtube.com/embed/qNkcwKqVF14?si=wiTDNe1uioYoqDwu" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="modal-footer">
+              <p>No olvides pausar el video antes de salir</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section>
+    <section class="cronologia">
       <div class="header-section-a">
         <h2 class="titulo-blanco">Cronología</h2>
         <p>

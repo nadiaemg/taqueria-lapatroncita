@@ -409,6 +409,7 @@ footer hr {
 .boton-amarillo:hover{
     background-color: transparent;
     color: var(--saffron);
+    transition: 0.3s ease-in;
 }
 
 .boton-verde {
@@ -425,6 +426,7 @@ footer hr {
 .boton-verde:hover{
     background-color: transparent;
     color: var(--avocado);
+    transition: 0.3s ease-in;
 }
 
 .boton-naranja {
@@ -441,6 +443,7 @@ footer hr {
 .boton-naranja:hover{
     background-color: transparent;
     color: var(--spanish-orange);
+    transition: 0.3s ease-in;
 }
 
 /*MediaQueries*/

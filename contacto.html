@@ -72,7 +72,7 @@
       <ul>
         <li>
           <a href="https://www.facebook.com/profile.php?id=100064276886596" target="_blank" class="facebook"><i
-              class="bi bi-facebook"></i></a></a>
+              class="bi bi-facebook"></i></a>
         </li>
         <li>
           <a href="https://www.instagram.com/taquerialapatroncita/" target="_blank" class="instagram"><i
@@ -84,7 +84,7 @@
         </li>
       </ul>
     </section>
-
+<!--
     <section class="mapa-contacto">
       <h6>Nos encontramos en:</h6>
       <p>Rtno. 29 Fray Servando Teresa de Mier #21, Colonia Jardín Balbuena, Alcaldía Venustiano Carranza, C.P. 15900,
@@ -93,7 +93,7 @@
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.916435027431!2d-99.10320332573917!3d19.416016241212166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fc1e17c653bb%3A0x905cfbb800118c60!2sTaquer%C3%ADa%20La%20Patroncita!5e0!3m2!1ses-419!2smx!4v1712951154582!5m2!1ses-419!2smx"
         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
-
+-->
     <section class="formulario-contenedor">
       <div class="header-section-a">
         <img class="menta" src="./src/img/menta.png" alt="menta">
@@ -104,7 +104,7 @@
         <div class="mb-5">
           <label for="nombre" class="form-label">Nombre Completo</label>
           <input type="text" class="form-control" id="nombre" placeholder="Su nombre(s) y apellido(s)"
-            autocomplete="name" required />
+            autocomplete="name" autocapitalize="words" required />
           <p class="widget-alert" id="alertaNombre"></p>
         </div>
         <div class="mb-5">
@@ -122,13 +122,13 @@
         <div class="mb-5">
           <label for="asunto" class="form-label">Asunto</label>
           <input type="text" class="form-control" id="asunto" placeholder="¿En qué podemos ayudarle?"
-            autocomplete="none" required />
+            autocomplete="off" autocapitalize="on" required />
           <p class="widget-alert" id="alertaAsunto"></p>
         </div>
         <div class="mb-5">
           <label for="mensaje" class="form-label">Mensaje</label>
           <textarea name="mensaje" class="form-control" id="mensaje" cols="30" rows="10"
-            placeholder="Escriba su mensaje completo aquí." autocomplete="none" required></textarea>
+            placeholder="Escriba su mensaje completo aquí." autocomplete="off" autocapitalize="on" required></textarea>
           <p class="widget-alert" id="alertaMensaje"></p>
         </div>
         <div class="contacto-politicas mb-5">

@@ -22,7 +22,136 @@ header h5 {
     justify-content: center;
 }
 
-.deslizar{
+.historia{
+    padding: 10rem 7% 10rem 7%;
+}
+
+.nuestra-historia{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: end;
+    margin-bottom: 10rem;
+}
+
+.nuestra-historia p{
+    margin-bottom: 0;
+}
+
+.nuestra-historia img{
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.video-historia{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../src/img/ejemplo2.jpg);
+    background-size: cover;
+    background-position: center 80%;
+    background-color: #391a05b3;
+    background-blend-mode: overlay;
+}
+
+.video-historia h2, .video-historia p{
+    color: var(--dutch-white);
+}
+
+.video-historia .header-section-a{
+    margin-bottom: 0;
+}
+
+.boton-reproducir i{
+    color: var(--dutch-white);
+    font-size: var(--h2-size);
+    line-height: var(--line-h2);
+}
+
+.boton-reproducir i:hover{
+    color: var(--saffron);
+    
+}
+
+.boton-reproducir{
+    background-color: transparent;
+    border: none;
+}
+
+.boton-reproducir:hover{
+    transform: scale(1.1);
+}
+
+/*Modal*/
+.modal-dialog{
+    max-width: 90vh;
+}
+
+.modal-header{
+    border-bottom: none;
+    justify-content: space-between;
+}
+
+.boton-cruz {
+    border: none;
+    border-radius: 0%;
+    background-color: transparent;
+    color: var(--saffron);
+    font-size: var(--h6-size);
+    font-family: var(--rufina);
+    margin-left: 1rem;
+}
+
+.boton-cruz:hover {
+    transform: scale(1.1);
+}
+
+.modal-title{
+    color: var(--saffron);
+}
+
+.modal-content{
+    background-color: #391a05fa;
+    height: 50vh;
+    box-shadow: 0 0 0 100vmax #381a0580;
+    border-radius: 0;
+    border: none;
+}
+
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-body iframe{
+    height: 100%;
+    width: 100%;
+}
+
+.modal-footer{
+    border-color: var(--dutch-white);
+}
+
+.cronologia{
+    margin: 10rem 7% 10rem 7%;
+}
+
+/*.deslizar{
     transform: rotate(90deg);
     align-self: flex-start;
+}*/
+
+@media (max-width: 992px){
+    .modal-content{
+        height: 70vh;
+    }
+    .boton-cruz {
+        font-size: var(--h6-size-sm);
+    }
+    
 }

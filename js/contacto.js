@@ -198,21 +198,15 @@ mensaje.addEventListener('blur', () => { mensaje.value = mensaje.value.trim(); }
 btnContacto.addEventListener('click', function (event) {
     event.preventDefault();
 
-    validarAceptarPoliticas();
-    validarMensaje();
-    validarAsunto();
-    validarTel();
-    validarCorreo();
-    validarNombre();
+    nombre.value = nombre.value.trim();
+    correo.value = correo.value.trim();
+    telefono.value = telefono.value.trim();
+    asunto.value = asunto.value.trim();
+    mensaje.value = mensaje.value.trim();
 
     /*Envío de formulario de contacto si se aceptan validaciones*/
     if(validarNombre() && validarCorreo() && validarTel() && validarAsunto() && validarMensaje() && validarAceptarPoliticas()){
         console.log("Campos válidos");
-        nombre.value = nombre.value.trim();
-        correo.value = correo.value.trim();
-        telefono.value = telefono.value.trim();
-        asunto.value = asunto.value.trim();
-        mensaje.value = mensaje.value.trim();
         enviarMensaje();
     }
 });
