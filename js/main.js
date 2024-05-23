@@ -3,6 +3,7 @@ const footer = document.querySelector("footer");
 const url = window.location.href;
 const regexEmail = new RegExp("^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$");
 const scriptURL = "https://script.google.com/macros/s/AKfycbx_CfROdeKRBfQ-IHgoddFnRF6Elol41OAaPG--FGCoLInZbep1lZZ4PAGFHPFpspix/exec";
+const year = new Date().getFullYear();
 
 function addNavbar() {
     header.insertAdjacentHTML("afterbegin", `
@@ -107,7 +108,7 @@ function addFooter() {
         <hr />
         <div class="redes-contenedor">
             <p class="widgets">
-                &copy; 2024. Taquería "La Patroncita". Todos los derechos reservados.
+                &copy; ${year}. Taquería "La Patroncita". Todos los derechos reservados.
             </p>
             <ul class="redes-sociales">
                 <li>

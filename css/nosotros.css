@@ -91,7 +91,6 @@ header h5 {
     height: 100%;
     object-fit: cover;
     object-position: bottom;
-    padding: 0 3rem 0 3rem;
 }
 
 .video-historia {
@@ -124,6 +123,7 @@ header h5 {
 
 .boton-reproducir i:hover {
     color: var(--saffron);
+    transition: color 1s ease;
 }
 
 .boton-reproducir {
@@ -133,6 +133,8 @@ header h5 {
 
 .boton-reproducir:hover {
     transform: scale(1.1);
+    transition: transform 1s ease;
+
 }
 
 /*Modal*/

@@ -132,7 +132,7 @@ iframe{
 .formulario-contenedor {
     position: relative;
     background-color: var(--dutch-white);
-    padding: 19.5rem 7% 5% 7%;
+    padding: 19.5rem 7% 6rem 7%;
 }
 
 .formulario-contenedor form label {
