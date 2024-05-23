@@ -1,4 +1,4 @@
-header{
+header {
     height: 100vh;
     height: 100dvh;
     background-image: url(../src/img/nosotros.jpg);
@@ -13,7 +13,7 @@ header h5 {
     color: var(--dutch-white);
 }
 
-.encabezado{
+.encabezado {
     height: 100%;
     padding-left: 7%;
     padding-right: 7%;
@@ -22,11 +22,11 @@ header h5 {
     justify-content: center;
 }
 
-.historia{
+.historia {
     padding: 10rem 7% 10rem 7%;
 }
 
-.nuestra-historia{
+.nuestra-historia {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 6rem;
@@ -34,18 +34,67 @@ header h5 {
     margin-bottom: 10rem;
 }
 
-.nuestra-historia p{
+.nuestra-historia p {
     margin-bottom: 0;
 }
 
-.nuestra-historia img{
+.nuestra-historia img {
     width: 100%;
     height: 40rem;
     object-fit: cover;
     object-position: center;
 }
 
-.video-historia{
+.historia-patroncita {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto-fit 11.8rem auto-fit 20rem 25rem auto-fit;
+    column-gap: 10rem;
+    margin-top: 10rem;
+}
+
+.a1 {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    text-align: center;
+}
+
+.a2 {
+    grid-column: 1/2;
+    grid-row: 2/6;
+}
+
+.a3 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.a4 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    text-align: center;
+}
+
+.a5 {
+    grid-column: 2/3;
+    grid-row: 5/8;
+}
+
+.a6 {
+    grid-column: 1/2;
+    grid-row: 7/8;
+    text-align: end;
+}
+
+.historia-patroncita img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    padding: 0 3rem 0 3rem;
+}
+
+.video-historia {
     height: 70vh;
     display: flex;
     flex-direction: column;
@@ -58,40 +107,40 @@ header h5 {
     background-blend-mode: overlay;
 }
 
-.video-historia h2, .video-historia p{
+.video-historia h2,
+.video-historia p {
     color: var(--dutch-white);
 }
 
-.video-historia .header-section-a{
+.video-historia .header-section-a {
     margin-bottom: 0;
 }
 
-.boton-reproducir i{
+.boton-reproducir i {
     color: var(--dutch-white);
     font-size: var(--h2-size);
     line-height: var(--line-h2);
 }
 
-.boton-reproducir i:hover{
+.boton-reproducir i:hover {
     color: var(--saffron);
-    
 }
 
-.boton-reproducir{
+.boton-reproducir {
     background-color: transparent;
     border: none;
 }
 
-.boton-reproducir:hover{
+.boton-reproducir:hover {
     transform: scale(1.1);
 }
 
 /*Modal*/
-.modal-dialog{
+.modal-dialog {
     max-width: 90vh;
 }
 
-.modal-header{
+.modal-header {
     border-bottom: none;
     justify-content: space-between;
 }
@@ -110,35 +159,97 @@ header h5 {
     transform: scale(1.1);
 }
 
-.modal-title{
+.modal-title {
     color: var(--saffron);
 }
 
-.modal-content{
+.modal-content {
     background-color: #391a05fa;
-    height: 50vh;
+    height: 70vh;
     box-shadow: 0 0 0 100vmax #381a0580;
     border-radius: 0;
     border: none;
 }
 
-.modal-body{
+.modal-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.modal-body iframe{
+.modal-body iframe {
     height: 100%;
     width: 100%;
 }
 
-.modal-footer{
+.modal-footer {
     border-color: var(--dutch-white);
 }
 
-.cronologia{
-    margin: 10rem 7% 10rem 7%;
+.cronologia {
+    padding: 10rem 7% 10rem 7%;
+    background-image: url(../src/img/romero.png);
+    background-position: 120% -7%;
+    background-repeat: no-repeat;
+    background-size: 68rem auto;
+}
+
+.cronologia ol {
+    padding: 0;
+    counter-reset: list-counter;
+}
+
+.cronologia ol li{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10rem;
+    counter-increment: list-counter;
+}
+
+.cronologia-descripcion h3::before {
+    content: counter(list-counter) ". ";
+    margin-right: 1rem;
+  }
+
+.cronologia img{
+    width: 100%;
+    height: 63rem;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.cronologia-descripcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cronologia-descripcion h3{
+    list-style: decimal;
+}
+
+.b1 {
+    order: 1;
+}
+
+.b2 {
+    order: 0;
+}
+
+.b3 {
+    order: 2;
+}
+
+.b4 {
+    order: 3;
+}
+
+.b5 {
+    order: 5;
+}
+
+.b6 {
+    order: 4;
 }
 
 /*.deslizar{
@@ -146,12 +257,49 @@ header h5 {
     align-self: flex-start;
 }*/
 
-@media (max-width: 992px){
-    .modal-content{
-        height: 70vh;
+/*Medium & small*/
+@media (max-width: 992px) {
+    .historia {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
     }
+    
+    .nuestra-historia{
+        grid-template-columns: auto;
+    }
+
+    .historia-patroncita {
+        display: block;
+    }
+
+    .historia-patroncita img {
+        padding: 0;
+    }
+
+    .a3, .a6 {
+        margin: 3rem 0 3rem 0;
+        text-align: start;
+    }
+
     .boton-cruz {
         font-size: var(--h6-size-sm);
     }
-    
+
+    .cronologia {
+        background-position: 120% -4%;
+        background-size: 40rem auto;
+        padding-bottom: 7rem;
+    }
+
+    .cronologia ol li {
+        display: block;
+    }
+
+    .cronologia-descripcion {
+        margin: 3rem 0 3rem 0;
+    }
+
+    .cronologia-seccion {
+        text-align: end;
+    }
 }
